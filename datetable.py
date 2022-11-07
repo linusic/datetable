@@ -237,8 +237,12 @@ class DateTable:
         content = sep.join( map(str, temp_list) )
         return content
         
-    def make_to_file(self, filename, sep="\t") -> None:
+    def make_to_file(self, filename, sep="\t", head=False) -> None:
         csv_rows_str = "\n".join( [self.make_date_csv_str(per_date, sep=sep) for per_date in self.day_list()] )
+        if head:
+            head_list = ["Date","Year","Month","Day","Week", "WeekOfYear","Quarter","IsWeekDay","Holiday"]
+            csv_rows_str = sep.join(head_list) + "\n" + csv_rows_str
+
         file_path = Path(filename).resolve()
         file_path.write_text(csv_rows_str, encoding="utf-8")
         print(f"Complete to write into: {file_path}")
