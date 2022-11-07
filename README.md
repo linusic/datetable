@@ -36,18 +36,21 @@ Date	Year	Month	Day	Week	WeekOfYear	Quarter	IsWeekDay	Holiday
 ...
 ```
 ## Modify
-change below in `datetable.py`
+change below in `datetable.py` to yours
 ```python
 # Holiday Range
 YuanDan = ("01-01", "01-03")  # "01-01", "01-02", "01-03"
+...
 
 # Even on "Saturday" or "Sunday", you still need to work
 BLACK_WORKDAY = [
     "01-29",  
+    ...
 ]
 
 # Named Holiday
 HOLIDAY_DICT = {
     "<HOLIDAY_NAME>":YuanDan,    # named "Holiday" column of result
+    ...
 }
 ```
