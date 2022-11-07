@@ -1,9 +1,7 @@
 ## Usage
 ```python
-from datetable import DataTable
-```
+from datetable import DateTable
 
-```python
 # put a year
 dt = DateTable(2022) 
 
