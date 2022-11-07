@@ -36,6 +36,7 @@ Date	Year	Month	Day	Week	WeekOfYear	Quarter	IsWeekDay	Holiday
 ...
 ```
 ## Modify
+change below in `datetable.py`
 ```python
 # Holiday Range
 YuanDan = ("01-01", "01-03")  # "01-01", "01-02", "01-03"
